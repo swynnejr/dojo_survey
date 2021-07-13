@@ -9,8 +9,9 @@
 <body>
     <h1>Thank you for taking the Dojo Survey!</h1>
     <h3>Create a User</h3>
+    <form action="survey" method="POST">
     <label for='name'>Name:</label>
-    <input type="text" style="margin: 5px;">
+    <input type="text" name="name" style="margin: 0px 5px;">
     <br>
     <label for='location'>Dojo Location:</label>
     <select name="location" id="location" style="margin: 5px;">
@@ -31,7 +32,9 @@
     <br>
     <label for="comment">Comments (optional):</label>
     <textarea name="comments" id="comments" cols="30" rows="3" style="margin: 5px;"></textarea>
-
+    </form>
+    <br>
+    <button style="margin: 15px 0px;">Submit yo shit</button>
 
 </body>
 </html>
