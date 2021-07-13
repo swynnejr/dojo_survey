@@ -4,21 +4,22 @@ app.secret_key = 'this survey has super secret content'
 
 @app.route('/')
 def survey():
-
     return render_template("index.html")
 
 
-# @app.route('/process')
-# def save_submission():
+@app.route('/process', methods = ['POST'])
+def confirmation():
+    session['name'] = request.form['name']
+    session['location'] = request.form['location']
+    session['language'] = request.form['language']
+    session['comments'] = request.form['comments']
+    return redirect('/result')
 
-#     return redirect("/")
 
+@app.route('/result')
+def save_submission():
 
-# @app.route('/result')
-# def confirmation():
-
-#     return render_template("index.html")
-
+    return render_template('result.html', name = session['name'], location = session['location'], language = session['language'], comment = session['comments'])
 
 
 

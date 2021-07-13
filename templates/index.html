@@ -9,7 +9,7 @@
 <body>
     <h1>Thank you for taking the Dojo Survey!</h1>
     <h3>Create a User</h3>
-    <form action="survey" method="POST">
+    <form action="/process" method="POST">
     <label for='name'>Name:</label>
     <input type="text" name="name" style="margin: 0px 5px;">
     <br>
@@ -30,11 +30,11 @@
         <option value="CSS">CSS</option>
     </select>
     <br>
-    <label for="comment">Comments (optional):</label>
+    <label for="comments">Comments (optional):</label>
     <textarea name="comments" id="comments" cols="30" rows="3" style="margin: 5px;"></textarea>
-    </form>
     <br>
-    <button style="margin: 15px 0px;">Submit yo shit</button>
+    <button style="margin: 15px 0px;" type="submit">Submit yo shit</button>
+    </form>
 
 </body>
 </html>
